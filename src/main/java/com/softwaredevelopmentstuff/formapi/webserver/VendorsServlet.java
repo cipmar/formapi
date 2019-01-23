@@ -1,6 +1,6 @@
-package com.softwaredevelopmentstuff.httpserver.webserver;
+package com.softwaredevelopmentstuff.formapi.webserver;
 
-import com.softwaredevelopmentstuff.httpserver.database.Database;
+import com.softwaredevelopmentstuff.formapi.database.Database;
 import org.eclipse.jetty.http.MimeTypes;
 
 import javax.servlet.http.HttpServlet;
@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import static com.softwaredevelopmentstuff.httpserver.webserver.App.renderBeginOfPage;
-import static com.softwaredevelopmentstuff.httpserver.webserver.App.renderEndOfPage;
+import static com.softwaredevelopmentstuff.formapi.webserver.App.renderBeginOfPage;
+import static com.softwaredevelopmentstuff.formapi.webserver.App.renderEndOfPage;
 
 public class VendorsServlet extends HttpServlet {
     @Override

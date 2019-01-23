@@ -1,4 +1,4 @@
-package com.softwaredevelopmentstuff.httpserver.webserver;
+package com.softwaredevelopmentstuff.formapi.webserver;
 
 import org.apache.commons.io.IOUtils;
 import org.eclipse.jetty.http.MimeTypes;
@@ -10,8 +10,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import static com.softwaredevelopmentstuff.httpserver.webserver.App.getPortalName;
-import static com.softwaredevelopmentstuff.httpserver.webserver.App.getTheme;
+import static com.softwaredevelopmentstuff.formapi.webserver.App.getPortalName;
+import static com.softwaredevelopmentstuff.formapi.webserver.App.getTheme;
 
 public class AddVendorFormServlet extends HttpServlet {
 

@@ -1,4 +1,4 @@
-package com.softwaredevelopmentstuff.httpserver.model;
+package com.softwaredevelopmentstuff.formapi.model;
 
 public class Vendor {
     private String name;

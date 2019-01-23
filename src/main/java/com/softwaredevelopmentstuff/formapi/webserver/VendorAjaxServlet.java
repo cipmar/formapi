@@ -1,7 +1,7 @@
-package com.softwaredevelopmentstuff.httpserver.webserver;
+package com.softwaredevelopmentstuff.formapi.webserver;
 
-import com.softwaredevelopmentstuff.httpserver.database.Database;
-import com.softwaredevelopmentstuff.httpserver.model.Vendor;
+import com.softwaredevelopmentstuff.formapi.database.Database;
+import com.softwaredevelopmentstuff.formapi.model.Vendor;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

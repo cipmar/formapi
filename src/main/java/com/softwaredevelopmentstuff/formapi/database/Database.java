@@ -1,6 +1,6 @@
-package com.softwaredevelopmentstuff.httpserver.database;
+package com.softwaredevelopmentstuff.formapi.database;
 
-import com.softwaredevelopmentstuff.httpserver.model.Vendor;
+import com.softwaredevelopmentstuff.formapi.model.Vendor;
 
 import java.util.ArrayList;
 import java.util.Collections;
