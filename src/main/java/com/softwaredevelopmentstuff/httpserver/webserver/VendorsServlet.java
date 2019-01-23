@@ -44,7 +44,7 @@ public class VendorsServlet extends HttpServlet {
         });
 
         String addVendorAddress = App.getOtherPortalAddress() + "/addVendor";
-        String returnAddress = "http://localhost:" + App.getPort() + "/vendor";
+        String returnAddress = "http://" + req.getHeader("Host") + "/vendor";
 
         resp.getWriter().println("</table>");
 
