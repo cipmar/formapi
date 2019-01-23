@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>Add a vendor</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark ${theme}">
+    <span class="navbar-brand mb-0">${portalName}</span>
+</nav>
+<br>
+
+<div class="container">
+    <h3>Add a vendor</h3>
+
+    <form action="${action}" method="post">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" autofocus>
+
+        <label for="countryOfRegistration">Country of Registration</label>
+        <input type="text" class="form-control" id="countryOfRegistration" name="countryOfRegistration">
+
+        <label for="registrationNumber">Registration Number</label>
+        <input type="text" class="form-control" id="registrationNumber" name="registrationNumber">
+
+        <hr class="mb-4">
+
+        <input type="submit" class="btn btn-default"/>
+    </form>
+</div>
+
+<script>
+    $('form').submit(function (e) {
+        // this code prevents form from actually being submitted
+        e.preventDefault();
+        e.returnValue = false;
+
+        var $form = $(this);
+        console.log($form);
+
+        $.ajax({
+            type: 'post',
+            url: "/vendorAjax",
+            context: $form,
+            data: $form.serialize(),
+            error: function () {
+            },
+            complete: function () {
+                this.off('submit');
+                this.submit();
+            }
+        })
+    })
+</script>
+
+</body>
+
+</html>
