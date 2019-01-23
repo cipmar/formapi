@@ -10,7 +10,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import static com.softwaredevelopmentstuff.httpserver.webserver.App.getOtherPortalAddress;
 import static com.softwaredevelopmentstuff.httpserver.webserver.App.getPortalName;
 import static com.softwaredevelopmentstuff.httpserver.webserver.App.getTheme;
 
