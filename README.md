@@ -1,7 +1,7 @@
 # formapi
 
 args
-<AppName> <Port> <OtherAppName>
+AppName Port OtherAppName
 
 Someting like
 
