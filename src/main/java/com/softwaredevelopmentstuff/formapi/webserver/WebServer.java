@@ -18,6 +18,7 @@ public class WebServer {
 
         Server server = new org.eclipse.jetty.server.Server(port);
         ServletHandler servletHandler = new ServletHandler();
+        servletHandler.addServletWithMapping(RootServlet.class, "/");
         servletHandler.addServletWithMapping(VendorServlet.class, "/vendor");
         servletHandler.addServletWithMapping(VendorAjaxServlet.class, "/vendorAjax");
         servletHandler.addServletWithMapping(VendorsServlet.class, "/vendors");
