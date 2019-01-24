@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class VendorAjaxServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
         req.getParameterMap().forEach((k, v) -> System.out.println(k + " :" + v[0]));

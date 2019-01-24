@@ -12,6 +12,8 @@ import static com.softwaredevelopmentstuff.formapi.webserver.App.renderBeginOfPa
 import static com.softwaredevelopmentstuff.formapi.webserver.App.renderEndOfPage;
 
 public class VendorsServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.setContentType(MimeTypes.Type.TEXT_HTML.asString());
