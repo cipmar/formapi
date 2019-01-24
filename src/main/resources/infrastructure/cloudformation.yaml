@@ -1,0 +1,62 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Form API App
+Resources:
+  PurchaseManagerEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties: 
+      InstanceType: t2.nano
+      ImageId: ami-0fad7378adf284ce0
+      KeyName: mariusr
+      UserData: !Base64 
+        'Fn::Join':
+          - ''
+          - - |
+              #!/bin/bash -xe
+            - |
+              # Install the files and packages from the metadata
+            - '/opt/aws/bin/cfn-init -v '
+            - '         --stack '
+            - !Ref 'AWS::StackName'
+            - '         --resource PurchaseManagerEC2Instance '
+            - '         --region '
+            - !Ref 'AWS::Region'
+            - |+   
+    Metadata:
+      AWS::CloudFormation::Init:
+        config:
+          packages:
+            yum:
+              java-1.8.0-openjdk: []
+          files:
+            /opt/formapi.jar:
+              source: https://formapi-concept-deploy.s3.amazonaws.com/formapi-1.0-SNAPSHOT.jar
+  VendorManagerEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties: 
+      InstanceType: t2.nano
+      ImageId: ami-0fad7378adf284ce0
+      KeyName: mariusr
+      UserData: !Base64 
+        'Fn::Join':
+          - ''
+          - - |
+              #!/bin/bash -xe
+            - |
+              # Install the files and packages from the metadata
+            - '/opt/aws/bin/cfn-init -v '
+            - '         --stack '
+            - !Ref 'AWS::StackName'
+            - '         --resource VendorManagerEC2Instance '
+            - '         --region '
+            - !Ref 'AWS::Region'
+            - |+   
+    Metadata:
+      AWS::CloudFormation::Init:
+        config:
+          packages:
+            yum:
+              java-1.8.0-openjdk: []
+          files:
+            /opt/formapi.jar:
+              source: https://formapi-concept-deploy.s3.amazonaws.com/formapi-1.0-SNAPSHOT.jar
